@@ -2,23 +2,24 @@
 
 :root{
     --primary-color: rgb(0, 162, 255);
+    --bg-color:rgb(215, 226, 228);
+    --icon-size:1.25rem;
     font-family: 'Roboto', sans-serif;    
 }
 
-.icon::before, .icon::marker{
+.icon::before{
     display: inline-block;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
+    font-size: var(--icon-size);
     margin-right: 0.5em;
-
 }
-
-
 
 body{
     margin: 0;
     height: 100vh;
+    background-color: var(--bg-color);
     display: grid;
     grid-template-columns: minmax(min-content,250px) 1fr;
     grid-template-rows: 300px 1fr;
@@ -45,6 +46,7 @@ nav{
 }
 
 .logo::before{
+    font-size: 1em;
     content: "\f58e";   
 }
 
@@ -62,8 +64,6 @@ nav li{
     margin-block: 0.75em;
     list-style: none;
 }
-
-
 
 #home a::before{
     content:'\f015';
@@ -93,8 +93,61 @@ nav li{
     content:'\f084';
 }
 
+/* Header */
+
 header{
     grid-area: header;
+    background-color: white;
+    font-size: 1.25rem;
+}
+
+header ul{
+    padding: 0;
+}
+
+header li{
+    display: inline;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+header .line1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2em;
+}
+
+header span[for='generalSearch']{
+    flex: 1;
+}
+
+header span[for='generalSearch']::before{
+    content: '\f002';
+    vertical-align: middle;
+}
+
+#generalSearch{
+    width: calc(100% - calc(var(--icon-size)*1.5));
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75em 1em;
+    font-size: 1rem;
+}
+
+#generalSearch:focus{
+    outline: none;
+}
+
+header .line2{
+    display: flex;
+    align-items: center;
 }
 
 .feed{
