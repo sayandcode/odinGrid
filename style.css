@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+:root{
+    --primary-color: rgb(0, 162, 255);
+    font-family: 'Roboto', sans-serif;    
+}
+
+.icon::before, .icon::marker{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    margin-right: 0.5em;
+
+}
+
+
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(min-content,250px) 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas: 
+        "nav header"
+        "nav feed";
+}
+
+nav{
+    grid-area: nav;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    gap:0.75em;
+    flex-direction: column;
+    padding: 1em;
+
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
+    margin-block: 0.5em 1em;
+}
+
+.logo::before{
+    content: "\f58e";   
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+ul{
+    margin-block: 0;
+}
+
+nav li{
+    margin-block: 0.75em;
+    list-style: none;
+}
+
+
+
+#home a::before{
+    content:'\f015';
+}
+#profile a::before{
+    content:'\f2c2';
+}
+#messages a::before{
+    content:'\f086';
+}
+#history a::before{
+    content:'\f1da';
+}
+#tasks a::before{
+    content:'\f0ae';
+}
+#community a::before{
+    content:'\f0a1';
+}
+#settings a::before{
+    content:'\f7d9';
+}
+#support a::before{
+    content:'\f590';
+}
+#privacy a::before{
+    content:'\f084';
+}
+
+header{
+    grid-area: header;
+}
+
+.feed{
+    grid-area: feed;
+}
+
+
