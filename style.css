@@ -286,7 +286,7 @@ p{
     grid-area: announcements;
 }
 
-#announcements ul{
+.whiteCard{
     padding: 1.5rem;
     border-radius: var(--borderRad);
     list-style: none;
@@ -318,5 +318,22 @@ p{
 
 .feed #trending{
     grid-area: trending;
+}
+
+#trending a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#trending a::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-image: url(https://data.whicdn.com/images/327001194/original.jpg);
+    border-radius: 100%;
+    background-size: cover;
 }
 
