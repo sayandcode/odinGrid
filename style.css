@@ -145,6 +145,18 @@ header span[for='generalSearch']::before{
     outline: none;
 }
 
+.line1 ul{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.line1 #dP{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
 header .line2{
     display: flex;
     align-items: center;
