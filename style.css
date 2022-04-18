@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
 
 :root{
-    --primary-color: rgb(0, 162, 255);
-    --bg-color:rgb(215, 226, 228);
-    --icon-size:1.25rem;
+    --primary-color: hsl(202, 100%, 44%);
+    --bg-color: rgb(215, 226, 228);
+    --icon-size: 1.25rem;
+    --shadow-color: hsl(0, 0%, 0%,0.25);
     font-family: 'Roboto', sans-serif;    
 }
 
@@ -22,7 +23,7 @@ body{
     background-color: var(--bg-color);
     display: grid;
     grid-template-columns: minmax(min-content,250px) 1fr;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: 
         "nav header"
         "nav feed";
@@ -98,7 +99,7 @@ nav li{
 header{
     grid-area: header;
     background-color: white;
-    font-size: 1.25rem;
+    box-shadow: 0px 0px 10px var(--shadow-color);
 }
 
 header ul{
@@ -119,7 +120,7 @@ header .line1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    margin: 1.5rem 3rem;
     gap: 2em;
 }
 
@@ -160,6 +161,42 @@ header span[for='generalSearch']::before{
 header .line2{
     display: flex;
     align-items: center;
+    margin: 1rem 3rem;
+}
+
+header .line2 h1{
+    margin: 0;
+    margin-left: 1rem;
+    font-size: 1rem;
+    flex: 1;
+}
+
+header .line2 h1 span{
+    display: block;
+    font-size: 1.5rem;
+}
+
+header .line2 img{
+    content: '';
+    background-image: url(https://i.pinimg.com/474x/31/4f/2a/314f2a1f891f259d70d75b603616827a.jpg);
+    background-color: red;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background-size: contain;
+}
+
+header .line2 li a{
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5em 2em;
+    border-radius: 1em;
+}
+
+header .line2 li:nth-of-type(2){
+    margin-inline: 1em;
 }
 
 .feed{
